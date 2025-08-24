@@ -78,11 +78,27 @@ class _UpdateScreenState extends State<UpdateScreen> {
             children: [
               Text(status, style: const TextStyle(fontSize: 18)),
               const SizedBox(height: 20),
-              if (updateAvailable && !downloading)
-                ElevatedButton(
-                  onPressed: _downloadUpdate,
-                  child: const Text('Update Now'),
-                ),
+
+              // Buttons Row
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  if (updateAvailable && !downloading)
+                    ElevatedButton(
+                      onPressed: _downloadUpdate,
+                      child: const Text('Update Now'),
+                    ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                    onPressed: _checkUpdate,
+                    child: const Text('Refresh'),
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 20),
+
+              // Progress Bar
               if (downloading)
                 LinearPercentIndicator(
                   width: 250,
