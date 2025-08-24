@@ -2,7 +2,7 @@ name: frostupdate
 description: "FrostUpdate - Check for latest updates directly from your portfolio."
 publish_to: 'none' # Private package
 
-version: 1.0.6+1
+version: 1.0.8+2
 
 environment:
   sdk: ^3.9.0
