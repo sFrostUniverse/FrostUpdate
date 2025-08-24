@@ -1,0 +1,40 @@
+name: frostupdate
+description: "FrostUpdate - Check for latest updates directly from your portfolio."
+publish_to: 'none' # Private package
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  http: ^1.2.3
+  package_info_plus: ^4.1.0
+  dio: ^5.9.0
+  path_provider: ^2.0.16
+  open_file: ^3.5.10
+  url_launcher: ^6.2.1
+  percent_indicator: ^4.2.5
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Uncomment and add your assets here
+  # assets:
+  #   - assets/images/
+  #   - assets/icons/
+
+  # Uncomment and add custom fonts here
+  # fonts:
+  #   - family: YourFontFamily
+  #     fonts:
+  #       - asset: assets/fonts/YourFont-Regular.ttf
