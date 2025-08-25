@@ -49,9 +49,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
     });
 
     final filePath = await UpdateService.downloadUpdate(downloadUrl, (p) {
-      setState(() {
-        progress = p;
-      });
+      setState(() => progress = p);
     });
 
     setState(() {
@@ -61,9 +59,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
           : 'Download failed!';
     });
 
-    if (filePath != null) {
-      OpenFile.open(filePath); // opens APK installer
-    }
+    if (filePath != null) OpenFile.open(filePath);
   }
 
   @override
@@ -78,8 +74,6 @@ class _UpdateScreenState extends State<UpdateScreen> {
             children: [
               Text(status, style: const TextStyle(fontSize: 18)),
               const SizedBox(height: 20),
-
-              // Buttons Row
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -95,10 +89,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
                   ),
                 ],
               ),
-
               const SizedBox(height: 20),
-
-              // Progress Bar
               if (downloading)
                 LinearPercentIndicator(
                   width: 250,
